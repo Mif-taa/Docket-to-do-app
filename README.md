@@ -8,6 +8,8 @@ A beautifully designed, modern to-do list application with a stunning mauve them
 
 ---
 
+![Docket Dashboard](screenshots/dashboard.png)
+
 ## ✨ Features
 
 - **🎨 Modern UI/UX** - Eye-catching mauve color palette with smooth gradients and shadows
