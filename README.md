@@ -1,6 +1,6 @@
 # 📋 Docket — Modern To-Do App
 
-A beautifully designed, modern to-do list application with a stunning mauve theme, smooth animations, and a responsive interface. Built with vanilla JavaScript, HTML, and CSS—no frameworks required.
+A beautifully designed, modern to-do list application with a stunning mauve theme, smooth animations and a responsive interface. Built with vanilla JavaScript, HTML, and CSS—no frameworks required.
 
 ![Docket App](https://img.shields.io/badge/Status-Active-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -215,11 +215,6 @@ Update font imports in `index.html`:
 
 ---
 
-## 🐛 Known Issues
-
-None currently. Please report any bugs via [GitHub Issues](https://github.com/yourusername/docket-todo-app/issues).
-
----
 
 ## 🤝 Contributing
 
@@ -243,17 +238,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Fonts**: Google Fonts (Playfair Display, JetBrains Mono)
 - **Inspiration**: Modern UI/UX design principles
-- **Community**: Thanks to all contributors
 
 ---
 
-## 📞 Contact & Support
-
-- 🐛 **Report Bugs**: [GitHub Issues](https://github.com/yourusername/docket-todo-app/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/docket-todo-app/discussions)
-- 📧 **Email**: your.email@example.com
-
----
 
 ## 🚦 Roadmap
 
