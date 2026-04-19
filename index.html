@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docket — Daily Tasks</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Playfair Display + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── Dark mode toggle ─── -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <span class="theme-icon">☽</span>
+  </button>
+
+  <div class="app-wrapper">
+
+    <!-- ─── Header ─── -->
+    <header class="app-header">
+      <div class="header-top">
+        <div class="logo-mark">✦</div>
+        <h1 class="app-title">Docket</h1>
+      </div>
+      <p class="app-subtitle" id="dateDisplay"></p>
+      <div class="task-summary" id="taskSummary" role="status" aria-live="polite">0 tasks remaining</div>
+    </header>
+
+    <!-- ─── Input area ─── -->
+    <section class="input-section">
+      <div class="input-row">
+        <label class="sr-only" for="taskInput">New task</label>
+        <input
+          type="text"
+          id="taskInput"
+          class="task-input"
+          placeholder="What needs to be done?"
+          maxlength="200"
+          autocomplete="off"
+          aria-label="New task"
+        />
+        <label class="sr-only" for="dueDateInput">Due date</label>
+        <input
+          type="date"
+          id="dueDateInput"
+          class="date-input"
+          title="Set due date (optional)"
+          aria-label="Due date"
+        />
+        <button class="add-btn" id="addBtn" aria-label="Add task">
+          <span>+</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ─── Filter bar ─── -->
+    <nav class="filter-bar" role="tablist" aria-label="Task filters">
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="filter-btn" data-filter="pending" role="tab" aria-selected="false">Pending</button>
+      <button class="filter-btn" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+      <button class="clear-completed-btn" id="clearCompletedBtn" title="Clear all completed tasks">
+        Clear done
+      </button>
+    </nav>
+
+    <!-- ─── Task list ─── -->
+    <main class="task-list-wrapper">
+      <ul class="task-list" id="taskList" aria-label="Task list" aria-live="polite">
+        <!-- Tasks rendered by JS -->
+      </ul>
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-figure" aria-hidden="true">
+          <div class="empty-icon">◎</div>
+          <span class="empty-dot empty-dot--1"></span>
+          <span class="empty-dot empty-dot--2"></span>
+          <span class="empty-dot empty-dot--3"></span>
+        </div>
+        <p><strong>No tasks yet</strong><br/>Add your first task to start planning.</p>
+      </div>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <span class="toast-message" id="toastMessage"></span>
+      <button type="button" class="toast-action" id="toastAction">Undo</button>
+    </div>
+
+    <!-- ─── Footer ─── -->
+    <footer class="app-footer">
+      <span>Drag to reorder &nbsp;·&nbsp; Click to complete &nbsp;·&nbsp; Double-click to edit</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
